@@ -14,7 +14,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone"/>
+        android:visibility="visible"/>
 
     <Button
         android:id="@+id/button"
@@ -26,11 +26,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:onClick="loadText"
-        android:text="Load Text"
+        android:text="Load Text via Content Provider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        android:visibility="gone"/>
+        android:visibility="visible"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -47,9 +47,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Load Text via AIDL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        android:onClick="loadTextAidl"/>
 
 </android.support.constraint.ConstraintLayout>
